@@ -14,6 +14,11 @@ class Api::V1::BooksController < ApplicationController
   def update
     render json: Book.update(params[:id], book_params)
   end
+
+  def destroy
+    render json: Book.delete(params[:id])
+  end
+  
   private
 
   def book_params
