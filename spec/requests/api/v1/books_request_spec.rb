@@ -102,6 +102,7 @@ describe "Books API" do
   it "can destroy a book" do
     book = create(:book)
 
+    # expect(Book.count).to eq(0)
     expect{ delete "/api/v1/books/#{book.id}" }.to change(Book, :count).by(-1)
     expect{Book.find(book.id)}.to raise_error(ActiveRecord::RecordNotFound)
   end

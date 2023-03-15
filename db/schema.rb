@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_03_14_222336) do
+ActiveRecord::Schema.define(version: 2023_03_15_010334) do
 
   create_table "books", force: :cascade do |t|
     t.string "title"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2023_03_14_222336) do
     t.integer "number_sold"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "popularity"
   end
 
 end
